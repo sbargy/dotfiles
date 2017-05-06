@@ -1,4 +1,5 @@
 dotfiles
 ========
 
-My dotfiles, that is all...
+My dotfiles.  Now need to write a deployment script to move them
+into place when I go to a new machine.
