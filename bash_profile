@@ -1,10 +1,14 @@
+[ -r ~/.bash_aliases ] && source ~/.bash_aliases
+[ -r ~/.bash_functions ] && source ~/.bash_functions
+
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 # Ensure user-installed binaries take precedence
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 #PS1='\h:\u:\w\$ '
-export PS1='\n[\w]\n\u@\h\$ '
+#export PS1='\n[\w]\n\u@\h\$ '
+export PS1="\n[\w] \$(parse_git_branch)\n\u@\h\$ "
 
 alias ls='ls -FC'
 alias ll='ls -l'
@@ -48,3 +52,9 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
+
+# python virtualenv
+#export WORKON_HOME=~/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON="/usr/local/Cellar/python/2.7.14/bin/python2.7"
+#export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
+#source /usr/local/bin/virtualenvwrapper.sh
