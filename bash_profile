@@ -53,6 +53,8 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
 
+export ANSIBLE_NOCOWS=1
+
 # python virtualenv
 #export WORKON_HOME=~/.virtualenvs
 #export VIRTUALENVWRAPPER_PYTHON="/usr/local/Cellar/python/2.7.14/bin/python2.7"
