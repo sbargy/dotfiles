@@ -29,6 +29,7 @@ alias gvim='open -n -a MacVim.app '
 
 export HISTSIZE=500000
 export HISTCONTROL=ignorespace
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
 export LANG=en_US.UTF-8
 export NODE_PATH='/usr/local/lib/node'
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig/
@@ -60,3 +61,7 @@ export ANSIBLE_NOCOWS=1
 #export VIRTUALENVWRAPPER_PYTHON="/usr/local/Cellar/python/2.7.14/bin/python2.7"
 #export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
 #source /usr/local/bin/virtualenvwrapper.sh
+
+# go
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH="$HOME/Projects/go"
