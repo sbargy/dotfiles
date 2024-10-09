@@ -1,0 +1,5 @@
+#SB
+set -o vi
+
+PS1="\n$PS1"
+
