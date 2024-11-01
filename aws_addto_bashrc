@@ -3,3 +3,7 @@ set -o vi
 
 PS1="\n$PS1"
 
+# OR
+
+PS1="\n[\w]\n\u@\h\$ "
+export PS1
